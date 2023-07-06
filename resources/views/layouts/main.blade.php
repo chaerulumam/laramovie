@@ -35,16 +35,7 @@
             </ul>
             <div class="flex flex-col md:flex-row items-center">
                 <div class="relative mt-3 md:mt-0">
-                    <input type="text" name="" id=""
-                        class="bg-gray-800 text-sm rounded-full w-64 px-4 pl-8 py-1 focus:outline-none focus:shadow-outline"
-                        placeholder="Search">
-                    <div class="absolute top-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="fill-current w-4 text-gray-500 mt-1 ml-2"
-                            width="20" height="20" viewBox="0 0 50 50">
-                            <path
-                                d="M21 3C11.621 3 4 10.621 4 20s7.621 17 17 17c3.71 0 7.14-1.195 9.938-3.219l13.156 13.125 2.812-2.812-13-13.032A16.923 16.923 0 0 0 38 20c0-9.379-7.621-17-17-17Zm0 2c8.297 0 15 6.703 15 15s-6.703 15-15 15S6 28.297 6 20 12.703 5 21 5Z" />
-                        </svg>
-                    </div>
+                    <livewire:search-dropdown />
                 </div>
                 <div class="md:ml-4 mt-3 md:mt-0">
                     <a href="" id="">
@@ -55,6 +46,7 @@
         </div>
     </nav>
     @yield('content')
+    @livewireScripts
 </body>
 
 </html>
