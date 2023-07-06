@@ -44,7 +44,7 @@
         @if (count($movie['videos']['results']) > 0)
         <div class="mt-12">
             <a href="https://youtube.com/watch?v={{ $movie['videos']['results'][0]['key'] }}" target="_blank"
-                class="flex inline-flex items-center bg-orange-500 text-gray-900 rounded font-semibold px-5 py-4 hover:bg-orange-600 transition ease-in-out duration-150">
+                class="inline-flex items-center bg-orange-500 text-gray-900 rounded font-semibold px-5 py-4 hover:bg-orange-600 transition ease-in-out duration-150">
                 <svg class="w-6 fill-current" viewBox="0 0 24 24">
                     <path d="M0 0h24v24H0z" fill="none" />
                     <path
