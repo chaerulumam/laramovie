@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ViewModels\MoviesViewModel;
 use Illuminate\Support\Facades\Http;
 
 class MoviesController extends Controller
@@ -30,11 +31,17 @@ class MoviesController extends Controller
                         ->get('https://api.themoviedb.org/3/movie/now_playing')
                         ->json()['results'];
 
-        return view('index', [
-            'popularMovie' => $popularMovie,
-            'genres' => $genres,
-            'nowPlaying' => $nowPlaying
-        ]);
+        // return view('index', [
+        //     'popularMovie' => $popularMovie,
+        //     'genres' => $genres,
+        //     'nowPlaying' => $nowPlaying
+        // ]);
+
+        $view = new MoviesViewModel(
+            $popularMovie, $genres, $nowPlaying
+        );
+
+        return view('index', $view);
     }
 
     /**
